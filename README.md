@@ -1,11 +1,11 @@
 # AIAE Helm Versions
 
-Environment-specific values and image tags for AIAE services. Operational Hub
-is the first deployed service.
+Feedlot-style immutable image versions for AIAE services. Operational Hub is
+the first deployed service.
 
-Branches:
+Branch ownership:
 
-- dev - development values
-- prod - production values
+- `main` contains one values directory per deployable service.
 
-GitHub Actions updates operational-hub-api/images.yaml on the target environment branch after backend verification, image push, and Maven Liquibase migration succeed.
+GitHub Actions commits new application and Liquibase image tags to `main`, then
+pins that commit in the target `AIAE-helm` environment branch.
