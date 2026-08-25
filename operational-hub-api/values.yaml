@@ -1,0 +1,63 @@
+nameOverride: operational-hub-api
+environment: dev
+namespace: aiae-operational-hub-dev
+
+replicaCount: 2
+
+image:
+  repository: CHANGE_ME_AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/aidigital.aiae-projects/operational-hub-application
+  tag: bootstrap
+
+config:
+  SPRING_PROFILES_ACTIVE: "eks"
+  PORT: "5000"
+  MANAGEMENT_HEALTH_PROBES_ENABLED: "true"
+  SPRING_LIQUIBASE_ENABLED: "false"
+  AUTH_ALLOWED_EMAIL_DOMAIN: "aidigital.com"
+  AUTH_AUTHORIZED_PARTIES: "https://CHANGE_ME_DEV_APP_HOST"
+  AUTH_ISSUER_URI: "https://CHANGE_ME_DEV_CLERK_DOMAIN"
+  AUTH_JWKS_URI: "https://CHANGE_ME_DEV_CLERK_DOMAIN/.well-known/jwks.json"
+  CLERK_PUBLISHABLE_KEY: "CHANGE_ME_DEV_CLERK_PUBLISHABLE_KEY"
+  BIGQUERY_ENABLED: "false"
+  BIGQUERY_STUB_ENABLED: "true"
+  USAGE_LOG_ENVIRONMENT: "dev"
+  LOGBOOK_LEVEL: "INFO"
+
+secretEnv:
+  POSTGRES_HOST: POSTGRES_HOST
+  POSTGRES_PORT: POSTGRES_PORT
+  POSTGRES_DB: POSTGRES_DB
+  POSTGRES_USER: POSTGRES_USER
+  POSTGRES_PASSWORD: POSTGRES_PASSWORD
+  GOOGLE_SERVICE_ACCOUNT_JSON: GOOGLE_SERVICE_ACCOUNT_JSON
+
+secretsManager:
+  enabled: true
+  awsSecretName: AIAE-DEV/operational-hub
+  keys:
+    - POSTGRES_HOST
+    - POSTGRES_PORT
+    - POSTGRES_DB
+    - POSTGRES_USER
+    - POSTGRES_PASSWORD
+    - GOOGLE_SERVICE_ACCOUNT_JSON
+
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: CHANGE_ME_DEV_API_ROLE_ARN
+
+ingress:
+  enabled: true
+  className: alb
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health/readiness
+  hosts:
+    - host: CHANGE_ME_DEV_API_HOST
+      paths:
+        - path: /api
+          pathType: Prefix
+        - path: /actuator/health
+          pathType: Prefix

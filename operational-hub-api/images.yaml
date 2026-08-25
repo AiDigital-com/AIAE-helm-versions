@@ -1,0 +1,3 @@
+image:
+  repository: CHANGE_ME_AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/aidigital.aiae-projects/operational-hub-application
+  tag: bootstrap
