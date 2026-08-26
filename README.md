@@ -1,6 +1,6 @@
 # AIAE Helm Versions
 
-Feedlot-style immutable image versions for AIAE services. Operational Hub is
+Immutable image versions for AIAE services. Operational Hub is
 the first deployed service.
 
 Branch ownership:
