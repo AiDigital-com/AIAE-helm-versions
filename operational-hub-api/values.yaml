@@ -1,5 +1,5 @@
 image:
-  tag: "83ddded1958a"
+  tag: "cicd-test-08676b657b27"
 liquibase:
   image:
-    tag: "liquibase-83ddded1958a"
+    tag: "liquibase-cicd-test-08676b657b27"
