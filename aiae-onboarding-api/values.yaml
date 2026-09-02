@@ -1,15 +1,8 @@
-# Image tags for aiae-onboarding-api. Written by the application repository's
-# deployment workflows; do not edit by hand.
-#
-# BOOTSTRAP PLACEHOLDER: no image has been published yet. The first successful
-# DEV workflow run replaces every value here with the real immutable tags. The
-# child Application on AIAE-helm/dev stays enabled=false until then, so Argo CD
-# never attempts to pull these placeholder tags.
 image:
-  tag: "0.0.0-bootstrap-000000000000"
+  tag: "1.0.0-snapshot-34a54187e017"
   pullPolicy: IfNotPresent
 liquibase:
   image:
-    tag: "liquibase-0.0.0-bootstrap-000000000000"
+    tag: "liquibase-1.0.0-snapshot-34a54187e017"
     pullPolicy: IfNotPresent
-deploymentRevision: "bootstrap"
+deploymentRevision: 34a54187e0174798f46c52e572e945887746ba9c-33654620133-1
