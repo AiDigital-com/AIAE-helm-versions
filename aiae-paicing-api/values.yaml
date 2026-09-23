@@ -11,18 +11,18 @@
 # They are pinned together because a release is only restorable as a complete
 # set, and the rollback workflow skips any candidate missing one of the four.
 image:
-  tag: "1.0.0-snapshot-8590efaf7255"
+  tag: "1.0.0-snapshot-acccecb11c78"
   pullPolicy: IfNotPresent
 builder:
   image:
-    tag: "builder-1.0.0-snapshot-8590efaf7255"
+    tag: "builder-1.0.0-snapshot-acccecb11c78"
     pullPolicy: IfNotPresent
 fetcher:
   image:
-    tag: "fetcher-1.0.0-snapshot-8590efaf7255"
+    tag: "fetcher-1.0.0-snapshot-acccecb11c78"
     pullPolicy: IfNotPresent
 migrate:
   image:
-    tag: "migrate-1.0.0-snapshot-8590efaf7255"
+    tag: "migrate-1.0.0-snapshot-acccecb11c78"
     pullPolicy: IfNotPresent
-deploymentRevision: "8590efaf7255061f0bfc49dd810597235003aa7e-35870853596-1"
+deploymentRevision: "acccecb11c78c8159954218d2e08e901edf86674-35882610285-1"
