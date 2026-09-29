@@ -25,4 +25,4 @@ migrate:
   image:
     tag: "migrate-1.0.0-snapshot-5fa678dc4bf4"
     pullPolicy: IfNotPresent
-deploymentRevision: "5fa678dc4bf42d6d159a3bd95920f0566354e0ed-36578379949-1"
+deploymentRevision: "5fa678dc4bf42d6d159a3bd95920f0566354e0ed-36578379949-2"
