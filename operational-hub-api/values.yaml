@@ -1,8 +1,8 @@
 image:
-  tag: "1.0.0-snapshot-ffac48b2eef8"
+  tag: "1.0.0-ffac48b2eef8"
   pullPolicy: IfNotPresent
 liquibase:
   image:
-    tag: "liquibase-1.0.0-snapshot-ffac48b2eef8"
+    tag: "liquibase-1.0.0-ffac48b2eef8"
     pullPolicy: IfNotPresent
-deploymentRevision: ffac48b2eef810c60ad595a2417965dfc334d855-39761750696-1
+deploymentRevision: ffac48b2eef810c60ad595a2417965dfc334d855-39770238717-1
