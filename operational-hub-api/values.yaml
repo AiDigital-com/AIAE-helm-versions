@@ -1,8 +1,8 @@
 image:
-  tag: "1.0.0-snapshot-d8d1e2dc036b"
+  tag: "1.0.0-snapshot-507f4115962d"
   pullPolicy: IfNotPresent
 liquibase:
   image:
-    tag: "liquibase-1.0.0-snapshot-d8d1e2dc036b"
+    tag: "liquibase-1.0.0-snapshot-507f4115962d"
     pullPolicy: IfNotPresent
-deploymentRevision: d8d1e2dc036be026d47c58045ec98dc7ba34a81f-43894068843-1
+deploymentRevision: 507f4115962dfc106b59dd4008adc1aaea0abeef-44079436134-1
