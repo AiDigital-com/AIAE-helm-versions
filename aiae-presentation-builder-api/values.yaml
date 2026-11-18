@@ -5,4 +5,4 @@ liquibase:
   image:
     tag: "liquibase-1.0.0-f720c6c51678"
     pullPolicy: IfNotPresent
-deploymentRevision: f720c6c516784980af371418325a139d514d4ed8-44355510145-2
+deploymentRevision: f720c6c516784980af371418325a139d514d4ed8-44368542584-1
