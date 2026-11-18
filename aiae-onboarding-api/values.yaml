@@ -1,8 +1,8 @@
 image:
-  tag: "1.0.0-snapshot-ebfa2f97c9b4"
+  tag: "1.0.0-ebfa2f97c9b4"
   pullPolicy: IfNotPresent
 liquibase:
   image:
-    tag: "liquibase-1.0.0-snapshot-ebfa2f97c9b4"
+    tag: "liquibase-1.0.0-ebfa2f97c9b4"
     pullPolicy: IfNotPresent
-deploymentRevision: ebfa2f97c9b497cb376506ea80d9493519581f00-44314638004-1
+deploymentRevision: ebfa2f97c9b497cb376506ea80d9493519581f00-44326041824-1
